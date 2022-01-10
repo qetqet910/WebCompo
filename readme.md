@@ -4,8 +4,6 @@
 
 ### ---- Daily Style 1 사이트들 ----
 
-[링크]()
-
 [𝕃𝕀ℕ𝕂](https://friendly-clarke-4d201d.netlify.app/)
 [𝕃𝕀ℕ𝕂](https://elegant-shannon-be4b5a.netlify.app/)
 [𝕃𝕀ℕ𝕂](https://relaxed-nightingale-43669e.netlify.app/)
