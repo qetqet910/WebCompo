@@ -2,6 +2,8 @@
 
 > 01 - [링크](https://friendly-torvalds-9ecea3.netlify.app/) / 오랜만이라 결과물이 너무 마음에 안 든다
 
+> 02 - [링크](https://nifty-mayer-4f3992.netlify.app/) / 역시 3d가 나한테 맞는 것 같다
+
 ### ---- Daily Style 1 사이트들 ----
 
 [𝕃𝕀ℕ𝕂](https://friendly-clarke-4d201d.netlify.app/)

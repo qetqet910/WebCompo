@@ -1,0 +1,92 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 2rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #414141;
+
+    .date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 460px;
+        padding: 40px 20px;
+        cursor: move;
+        transform: rotateY(30deg) rotateX(10deg);
+        transform-style: preserve-3d;
+
+        &:hover {
+            div {
+                transform: rotateX(360deg);
+
+                &:last-child {
+                    transform: rotateX(630deg);
+                }
+            }
+        }
+
+        div {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            transition: all 2s ease-in-out;
+            transform-style: preserve-3d;
+            transition-delay: calc(0.25s * var(--j));
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform: rotateY(90deg) translateX(-50px);
+                transform-origin: left;
+                background-color: #383838;
+            }
+
+            span {
+                position: absolute;
+                display: grid;
+                place-items: center;
+                font-size: 2.2rem;
+                font-weight: bold;
+                width: 100px;
+                height: 100px;
+                font-family: 'Montserrat', sans-serif;
+                color: white;
+                background: linear-gradient(#434343, #535353);
+                transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+                transform-style: preserve-3d;
+            }
+
+            &:last-child {
+                span {
+                    background: #2ED24A;
+                    color: #434343;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    transform: rotateY(90deg) translateX(-50px);
+                    transform-origin: left;
+                    background-color: #2DAB3E;
+                }
+            }
+        }
+    }
+}
