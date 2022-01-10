@@ -1,0 +1,138 @@
+@import '_Color.scss';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    .screen {
+        display: flex;
+        width: 100vw;
+        min-height: 100vh;
+        background-color: $MainColor;
+        padding: 60px;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            min-width: 14vw;
+
+            .logo {
+                img {
+                    width: 150px;
+                    height: 100px;
+                }
+            }
+
+            span {
+                display: block;
+                font-size: .6rem;
+                color: white;
+                width: 60%;
+                line-height: 12px;
+            }
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: .1fr .9fr;
+
+            .top {
+                nav {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    height: 100%;
+
+                    a {
+                        color: white;
+                        font-size: 1rem;
+
+                        span {
+                            display: inline-block;
+                            margin: 0px 8px;
+
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                display: flex;
+
+                a {
+                    position: relative;
+                    display: flex;
+                    color: white;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    padding: 20px 20px;
+                    transition: all .5s;
+
+                    &:hover {
+                        background-color: $HighlightColor;
+                        z-index: 10;
+                        transform: scale(1.1);
+
+                        img {
+                            transform: scale(1.2) translate(6%, -10%);
+                        }
+                    }
+
+
+                    .text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        padding: 20px 10px;
+
+                        span {
+                            position: relative;
+                            margin-top: 40px;
+
+                            &:nth-of-type(1) {
+                                font-size: 1.6rem;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0px;
+                                    bottom: -50%;
+                                    width: 120%;
+                                    height: 2px;
+                                    background-color: rgb(248, 231, 194);
+                                }
+                            }
+
+                            &:nth-of-type(2) {
+                                width: 80%;
+                                font-size: .8rem;
+                                margin-top: 40px;
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 30%;
+                        box-shadow: 2px 2px 10px black;
+                        transition: all .5s;
+                    }
+                }
+            }
+        }
+    }
+}
