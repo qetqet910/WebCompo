@@ -4,6 +4,8 @@
 
 > 02 - [링크](https://nifty-mayer-4f3992.netlify.app/) / 역시 3d가 나한테 맞는 것 같다
 
+> 03 - [링크](https://quirky-noyce-9fa689.netlify.app/) / 너무 오랜만 역시 3D
+
 ### ---- Daily Style 1 사이트들 ----
 
 [𝕃𝕀ℕ𝕂](https://friendly-clarke-4d201d.netlify.app/)
