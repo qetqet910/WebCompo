@@ -1,0 +1,198 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #e8ffe8;
+  overflow: hidden;
+}
+
+body .tree {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 200px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-20deg) rotateY(30deg);
+          transform: rotateX(-20deg) rotateY(30deg);
+  -webkit-animation: TreeRotate 4s infinite linear;
+          animation: TreeRotate 4s infinite linear;
+  -webkit-perspective: 1000%;
+          perspective: 1000%;
+}
+
+body .tree::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -280%;
+  width: 100%;
+  height: 100%;
+  background-color: #0002;
+  -webkit-transform: rotateX(90deg) scale(1.6);
+          transform: rotateX(90deg) scale(1.6);
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
+body .tree .stars {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+body .tree .stars .star {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+body .tree .stars .star img {
+  width: 100%;
+  height: 100%;
+}
+
+body .tree .top {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateY(calc(30% * var(--j)));
+          transform: translateY(calc(30% * var(--j)));
+}
+
+body .tree .top span {
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#69c069), to(#77dd77));
+  background: linear-gradient(90deg, #69c069, #77dd77);
+  border-bottom: 10px solid #00000019;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(130px) rotateX(30deg);
+          transform: rotateY(calc(90deg * var(--i))) translateZ(130px) rotateX(30deg);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+body .tree .wood {
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateY(calc(30% * var(--j)));
+          transform: translateY(calc(30% * var(--j)));
+}
+
+body .tree .wood span {
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#bb4622), to(#df7214));
+  background: linear-gradient(90deg, #bb4622, #df7214);
+  border-bottom: 10px solid #00000055;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(50px);
+          transform: rotateY(calc(90deg * var(--i))) translateZ(50px);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+body .tree .texts {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateY(calc(30% * var(--j)));
+          transform: translateY(calc(30% * var(--j)));
+}
+
+body .tree .texts span {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+          transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  color: #E23A3B;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-shadow: 4px 4px 1px white, -4px 4px 1px white, 4px -4px 1px white, -4px -4px 1px white;
+}
+
+@-webkit-keyframes TreeRotate {
+  0% {
+    -webkit-transform: rotateX(-20deg) rotateY(30deg) translateY(-126%);
+            transform: rotateX(-20deg) rotateY(30deg) translateY(-126%);
+  }
+  100% {
+    -webkit-transform: rotateX(-20deg) rotateY(390deg) translateY(-126%);
+            transform: rotateX(-20deg) rotateY(390deg) translateY(-126%);
+  }
+}
+
+@keyframes TreeRotate {
+  0% {
+    -webkit-transform: rotateX(-20deg) rotateY(30deg) translateY(-126%);
+            transform: rotateX(-20deg) rotateY(30deg) translateY(-126%);
+  }
+  100% {
+    -webkit-transform: rotateX(-20deg) rotateY(390deg) translateY(-126%);
+            transform: rotateX(-20deg) rotateY(390deg) translateY(-126%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
